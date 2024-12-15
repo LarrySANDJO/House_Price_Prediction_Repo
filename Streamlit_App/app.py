@@ -269,7 +269,7 @@ div[data-testid="stExpander"] div[role="button"] p {
 
 with st.sidebar:
     st.markdown('<div class="sidebar-logo">', unsafe_allow_html=True)
-    st.image("images/picture2.png",
+    st.image("images/LaplaceIMMO.png",
              caption="HOUSE PRICE PREDICTION",
              )
     st.markdown('</div>', unsafe_allow_html=True)
