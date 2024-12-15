@@ -321,7 +321,7 @@ else:
 
 st.markdown("""
     <div class="footer">
-        <p>ENSAE 2024/2025- Projet Machine Learning<br>
+        <p>ENSAE 2024/2025- Projet Machine Learning ISE2 <br>
             - Lesline
             - Anna
             - Yamine
