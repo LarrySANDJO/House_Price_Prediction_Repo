@@ -310,7 +310,7 @@ st.write("\n  ")
 #--------------------------------------------Photo de HPP
 st.markdown("---")
 
-st.image("images/picture4.jpg", width=1000)
+st.image("images/picture5.jpg", width=1000)
 
 #--------------------------------------------action sur les pages
  
