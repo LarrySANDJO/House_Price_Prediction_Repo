@@ -7,7 +7,7 @@ st.set_page_config(
     page_title="House Price Prediction",
       page_icon="🏬", 
       layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state = "expanded"
 )
 #-------------------------------------------- chargement css
 
@@ -218,7 +218,7 @@ st.markdown("""
 
 }
 .stSidebar{
-    background-color:#FFFFFF;
+    background-color:#E8E8E8;
 }
 
             
@@ -285,9 +285,6 @@ def display_header():
 
 display_header()
 
-
-
-
 #-------------------------------------------- menu navigation
 
 page = option_menu( # voir help du package streamlit_option_menu
@@ -305,12 +302,12 @@ page = option_menu( # voir help du package streamlit_option_menu
     }
 )
 
-st.write("\n  ")
+st.write("\n")
 
 #--------------------------------------------Photo de HPP
 st.markdown("---")
 
-st.image("images/picture5.jpg", width=1000)
+st.image("images/picture5.png", width=2000)
 
 #--------------------------------------------action sur les pages
  
@@ -324,7 +321,7 @@ else:
 
 st.markdown("""
     <div class="footer">
-        <p>ENSAE 2024/2025- TP Big Data<br>
+        <p>ENSAE 2024/2025- Projet Machine Learning<br>
             - Lesline
             - Anna
             - Yamine
