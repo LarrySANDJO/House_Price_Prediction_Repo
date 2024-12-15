@@ -7,6 +7,7 @@ Ce projet a ete realise dans le cadre du cours d'introduction au machine learnin
 ## Table des matieres
 - [Objectif](#objectif)
 - [Structure du projet](#structure-du-projet)
+- [Methodologie](#methodologie)
 - [Execution du projet](#execution-du-projet)
 - [Auteurs](#auteurs)
 
