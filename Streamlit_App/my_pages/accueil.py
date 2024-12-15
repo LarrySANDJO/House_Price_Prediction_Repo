@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from my_pages.local_fonctions import *
 
 def display():
 
@@ -91,34 +92,26 @@ def display():
         st.selectbox("Selectionnez une variable", options = Best_quanti, key = "key_quanti")
         
         if st.session_state['key_quanti']:
-            fig = px.scatter(df, x = "{st.session_state['key_quanti']}", y='SalePrice', title=f"Graphique de {st.session_state['key_quanti']} vs SalePrice",
+            fig = px.scatter(df, x = st.session_state['key_quanti'], y='SalePrice', title=f"Graphique de {st.session_state['key_quanti']} vs SalePrice",
                             labels={st.session_state['key_quanti']: st.session_state['key_quanti'], 'SalePrice': 'SalePrice'})
 
             st.plotly_chart(fig)
-    
-    
-    
-
-#--------------------------------------------Affichage des produits en rupture de stock par categorie
-
-    out_of_stock_data = st.session_state["df"][st.session_state["df"]["is_out_of_stock"] == True]
-
-    if not out_of_stock_data.empty:
-        fig2 = px.pie(
-            out_of_stock_data,
-            names="category",      
-            title="Produits en rupture de stock par catégorie",
-            hole=0.3               
-        )
+            
+    with col2:
+        st.markdown("""
+            <div class="dashboard-header animate-fade-in">
+                <h3 style = "text-align: center;font-weight: bold;">Graphique croise avec les variables qualitatives</h3>
+            </div>
+        """, unsafe_allow_html=True)
         
-        fig2.update_traces(textinfo="label+value", textfont_size=10) 
-        fig2.update_layout(title_font_size=24, legend_font_size=16)
+        st.selectbox("Selectionnez une variable", options = Best_quali, key = "key_quali")
         
-        with col2: 
-            st.plotly_chart(fig2, use_container_width=True)
-
-    else:
-        with col2: 
-            st.info("Aucun produit en rupture de stock.")
+        if st.session_state['key_quali']:
+            fig_categorical = px.box(df, x=st.session_state['key_quali'], y='SalePrice',
+                              title=f"Graphique de {st.session_state['key_quali']} vs SalePrice",
+                              labels={st.session_state['key_quali']: st.session_state['key_quali'], 'SalePrice': 'SalePrice'})
+            st.plotly_chart(fig_categorical)
+    
+    
 
     # Fin de la page d'acceuil
