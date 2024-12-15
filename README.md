@@ -68,9 +68,9 @@ Pour executer l'application :
 
 Les auteurs de ce projet sont essentiellement les eleves ingenieurs statisticiens economistes d'ISE2 2024-2025. Il s'agit de :
 
-- Lesline Kenne
-- Yamin Kolambigue
-- Anna Atchou
+- Lesline KENNE
+- Yamin KOAMBIGUE
+- Anna ATCHOU
 - Larry SANDJO
 
 
