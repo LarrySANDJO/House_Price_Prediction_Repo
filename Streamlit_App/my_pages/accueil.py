@@ -6,7 +6,7 @@ import plotly.express as px
 def display():
 
 #-------------------------------------------- Chargement des donnes
-    df = pd.read_csv("HOUSE_PRICE_PREDICTION/Data/Raw/train.csv")
+    df = pd.read_csv("Data/train.csv")
         
 #-------------------------------------------- Chargement du css pour les textes
     st.markdown("""
