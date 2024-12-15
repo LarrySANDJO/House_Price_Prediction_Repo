@@ -26,6 +26,12 @@ Ce projet a pour principal objectif de predire les prix des appartements a parti
 
 5.
 
+## Methodologie
+
+- Analyse exploratoire
+- Feature engeneering
+- Test et choix des modeles
+
 ## Installation et Configuration
 
 1. Clonez le dépôt et placez-vous dans le dossier AuchanScraping via un terminal :
