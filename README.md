@@ -73,11 +73,13 @@ Pour executer l'application :
 
 ## Auteurs 
 
-Les auteurs de ce projet sont essentiellement les eleves ingenieurs statisticiens economistes d'ISE2 2024-2025. Il s'agit de :
+Les auteurs de ce projet sont essentiellement les _eleves ingenieurs statisticiens economistes_ d'ISE2 2024-2025. Il s'agit de :
 
 - Lesline KENNE
 - Yamin KOAMBIGUE
 - Anna ATCHOU
 - Larry SANDJO
+
+Sous la supervision de **Mme Mously DIAW**, *Data Sciences*
 
 
