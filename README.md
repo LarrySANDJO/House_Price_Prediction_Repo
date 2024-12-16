@@ -80,6 +80,6 @@ Les auteurs de ce projet sont essentiellement les _eleves ingenieurs statisticie
 - Anna ATCHOU
 - Larry SANDJO
 
-Sous la supervision de **Mme Mously DIAW**, *Data Sciences*
+Sous la supervision de **Mme Mously DIAW**, *Data Scientist*
 
 
