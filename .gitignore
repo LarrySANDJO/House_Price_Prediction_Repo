@@ -1,0 +1,45 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# === Environnements virtuels ===
+env/
+venv/
+ENV/
+.venv/
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints/
+
+# === IDE et éditeurs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Systèmes d'exploitation ===
+.DS_Store         # macOS
+Thumbs.db         # Windows
+desktop.ini       # Windows
+
+# === Fichiers sensibles ===
+.env
+*.key
+*.pem
+
+# === Logs ===
+*.log
+logs/
+
+# === Données ===
+*.tsv
+*.sqlite
+*.db
+*.h5
