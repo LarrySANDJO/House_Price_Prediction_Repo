@@ -21,17 +21,18 @@ Ce projet a pour principal objectif de predire les prix des appartements a parti
 
 2. Le dossier `Notebooks` contient les notebooks de traitement des donnees et du choix du modeles
 
-3. 
+3. Le dossier `Src` contient les potentiels Scripts necessaires au projet
 
 4. Le dossier `Streamlit_App` contient l'application streamlit.
 
-5.
+5. Le dossier `Tests` contient les tests unitaires et autres tests
 
 ## Methodologie
 
 - Analyse exploratoire
 - Feature engeneering
 - Test et choix des modeles
+- Application sur Streamlit 
 
 ## Installation et Configuration
 
