@@ -327,7 +327,7 @@ st.markdown("""
             - Yamine
             - Larry
             </p>
-            <img src="https://ensai.fr/wp-content/uploads/2019/07/ENSAE-Dakar-logo.png" alt="Image du produit" style="width:5%; height:auto; border-radius: 8px;">
+            <img src="https://ensai.fr/wp-content/uploads/2019/07/ENSAE-Dakar-logo.png" alt="Logo ENSAE DAKAR" style="width:5%; height:auto; border-radius: 8px;">
     </div>
 """, unsafe_allow_html=True)
 
