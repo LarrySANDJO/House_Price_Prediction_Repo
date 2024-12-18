@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import joblib
 
 def display():
     #====================Importation de la base
@@ -123,7 +124,16 @@ def display():
     """, unsafe_allow_html=True)
         
         st.write(input_df)
+        
+        
+        # Charger le pipeline de prétraitement
+        preprocessing_pipeline = joblib.load('preprocessing_pipeline.joblib')
 
-        # Ici, vous pouvez ajouter le code pour faire la prédiction avec votre modèle
-        # par exemple : prediction = model.predict(input_df)
-        # st.write(f"Le prix prédit de la maison est : {prediction[0]}")
+        # Charger le modèle
+        model = joblib.load('best_model.pkl')
+        
+        preprocessed_data = preprocessing_pipeline.transform(input_df)
+        # Faire la prédiction
+        prediction = model.predict(preprocessed_data)
+
+        st.write(f"Le prix prédit de la maison est : {prediction[0]}")
