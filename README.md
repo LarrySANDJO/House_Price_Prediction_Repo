@@ -25,8 +25,6 @@ Ce projet a pour principal objectif de predire les prix des appartements a parti
 
 4. Le dossier `Streamlit_App` contient l'application streamlit.
 
-5. Le dossier `Tests` contient les tests unitaires et autres tests
-
 ## Methodologie
 
 - Analyse exploratoire
@@ -83,4 +81,5 @@ Les auteurs de ce projet sont essentiellement les _eleves ingenieurs statisticie
 
 Sous la supervision de **Mme Mously DIAW**, *Data Scientist*
 
+![Page de prediction des prix](prediction.png)
 

@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from custom_pipeline import *
 
 def display():
     #====================Importation de la base
