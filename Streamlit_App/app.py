@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from my_pages import accueil, Predictions
+from custom_pipeline import *
 
 #--------------------------------------------  l'en-tête commun
 st.set_page_config(

@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 import joblib
 from custom_pipeline import *
+from my_pages.local_fonctions import *
 
 def display():
     #====================Importation de la base
-    df = pd.read_csv('Data/données brutes_variables_choisie.csv')
+    df = pd.read_csv('Data/train.csv')
 
     st.markdown("""
         <div class="dashboard-header animate-fade-in">
@@ -20,14 +21,14 @@ def display():
         overall_qual = st.selectbox("Qualité générale", df['OverallQual'].unique())
         bsmt_qual = st.selectbox("Qualité du sous-sol", df['BsmtQual'].unique())
         heating_qc = st.selectbox("Qualité du chauffage", df['HeatingQC'].unique())
-        full_bath = st.number_input("Nombre de salles de bain complètes", min_value=0, max_value=5)
-        tot_rms_abv_grd = st.number_input("Total des pièces au-dessus du sol", min_value=0)
+        full_bath = st.number_input("Nombre de salles de bain complètes", min_value=0, max_value=max(df['FullBath'].unique()))
+        tot_rms_abv_grd = st.number_input("Total des pièces au-dessus du sol", min_value=0, max_value=max(df['TotRmsAbvGrd'].unique()))
         garage_finish = st.selectbox("Finition du garage", df['GarageFinish'].unique())
-        garage_cars = st.number_input("Nombre de voitures dans le garage", min_value=0, max_value=5)
+        garage_cars = st.number_input("Nombre de voitures dans le garage", min_value=0, max_value=max(df['GarageCars'].unique()))
         year_built = st.selectbox("Annee de construction de la maison", df['YearBuilt'].unique())
         garage_yrBlt = st.selectbox("Annee de construction du garage", df['GarageYrBlt'].unique())
         yr_sold = st.selectbox("Annee de vente", df['YrSold'].unique())
-        
+        year_remodadd = st.selectbox("Annee d renovation", df['YearRemodAdd'].unique())
         
         # Autres
         # kitchen_qual = st.selectbox("Qualité de la cuisine", df['KitchenQual'].unique())
@@ -79,7 +80,8 @@ def display():
             'GarageCars': garage_cars,
             'YearBuilt' : year_built,
             'GarageYrBlt' : garage_yrBlt,
-            'YrSold' : yr_sold
+            'YrSold' : yr_sold,
+            'YearRemodAdd' : year_remodadd,
             
             
             # Autres
@@ -126,7 +128,6 @@ def display():
         
         st.write(input_df)
         
-        
         # Charger le pipeline de prétraitement
         preprocessing_pipeline = joblib.load('preprocessing_pipeline.joblib')
 
@@ -137,4 +138,7 @@ def display():
         # Faire la prédiction
         prediction = model.predict(preprocessed_data)
 
-        st.write(f"Le prix prédit de la maison est : {prediction[0]}")
+        col1, col2, col3, col4, col5 = st.columns(5)
+        with col1:
+            st.info('Le prix prédit de la maison',icon="📌")
+            display_custom_metric("Prix prédit", f"{int(prediction[0])}$", "#582698")
