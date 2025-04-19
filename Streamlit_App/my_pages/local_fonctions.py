@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 def display_custom_metric(label, value, color):
     """
     return st.markdown

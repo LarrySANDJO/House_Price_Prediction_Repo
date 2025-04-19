@@ -4,6 +4,7 @@ import joblib
 from custom_pipeline import *
 from my_pages.local_fonctions import *
 
+
 def display():
     #====================Importation de la base
     df = pd.read_csv('Data/train.csv')

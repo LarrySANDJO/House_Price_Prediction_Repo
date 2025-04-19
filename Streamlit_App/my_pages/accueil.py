@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 from my_pages.local_fonctions import *
 
+
 def display():
 
 #-------------------------------------------- Chargement des donnes

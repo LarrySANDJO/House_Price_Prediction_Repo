@@ -312,6 +312,7 @@ st.image("images/picture5.png", width=2000)
 
 #--------------------------------------------action sur les pages
  
+  
 if page == "Predictions":
     Predictions.display()
 else:
